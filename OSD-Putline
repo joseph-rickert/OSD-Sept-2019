@@ -1,0 +1,47 @@
+Outline for OSD Presentation
+September 17 or 18
+Joseph B Rickert
+
+Title: Open Source Data Science: An R Perspective
+My Background
+ * RStudio
+ * R Consortium
+ 
+ Open Source
+ * What is Open Source?
+ * Characteristics of Open Source Data Science
+ * Strengths
+ * Weakness - Licenses
+ * Engaging with Open Source
+ 
+ The R Ecosystem
+ * What is R?
+ * The R Language
+ * R Packages
+ * Some History
+ * The R Ecosystem
+ * The R Community and collaboration
+      * Small Example with NOAA Data
+ 
+ Open Source Data Science
+ * Algorithms: machine learning inferential statistics
+     * ML Task View
+     * R code example
+ * Workflows
+ * Interoperable Open Source Tools
+     * R / Tensor Flow example
+ * Multiple Data Sources
+ * Public Development
+     * Version Control with GitHub
+ * Collaboration 
+     * Some Publically Available Shiny Projects
+ * Validation
+ * Reproduibility
+ * Production Pipelines
+ 
+ Some R Consortium Initiatives
+     * Projects and Working Groups
+     * Pharma / FDA Validation Hub Project
+     * Census Working Group
+ 
+ 

@@ -1,0 +1,46 @@
+---
+title: "Polar Ice - R Notebook"
+output: html_notebook
+---
+This notebook uses the R [rnoaa package](https://cran.r-project.org/package=rnoaa) on CRAN to visualize polar the change in the polar ice pack over time. 
+
+Load the R packages required to fetch the data and generate maps.
+```{r, message=FALSE, warning=FALSE}
+library(rnoaa)
+library(plyr)
+library("ggplot2")
+
+```
+
+Select the time frame to examine and fetch the data.
+
+```{r}
+urls <- seaiceeurls(mo = 'Apr', pole = 'N', yr = 2018)
+out <- seaice(urls)  
+``` 
+
+
+Generate the maps.
+
+```{r}
+ggplot(out, aes(long, lat, group = group)) +
+  geom_polygon(fill = "steelblue") +
+  theme_ice()
+
+urls <- seaiceeurls(mo = 'Apr', pole = 'N')[1:10]
+out <- lapply(urls, seaice)
+names(out) <- seq(2009, 2018, 1)
+df <- ldply(out)
+
+ggplot(df, aes(long, lat, group = group)) +
+  geom_polygon(fill = "steelblue") +
+  theme_ice() +
+  facet_wrap(~.id)
+```   
+
+It is possible to produce such a sophisticated result with just a few lines of code, because of the extensive infrastructure underlying the R language, the collaborative development of the code, the continual testing and the integration of several software systems: not only R packages but also the APIs used to make the NOAA data available.
+
+The [`rnoaa` package documentation](https://cran.r-project.org/package=rnoaa) illustrates the complexity, collaboration and testing.
+
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/rnoaa.png" height = "400" width="600">
