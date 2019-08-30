@@ -38,7 +38,9 @@ What is Open Source?
 
 - Open source projects, products, or initiatives embrace and celebrate principles of open exchange, collaborative participation, rapid prototyping, transparency, meritocracy, and community-oriented development
 
-Source: https://opensource.com/resources/what-open-source
+Source: [Linux Foundation](https://opensource.com/resources/what-open-source)
+
+For more open source information [TODO](https://todogroup.org/about/)
 
 Some Open Source Statistics
 ===========================================================
@@ -130,6 +132,47 @@ Robert Gentleman and Ross Ihaka
 </font>
 
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/R&R.png" height = "600" width="800">
+
+
+Reproducible Code and Text
+=====================================================
+R Markdown
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RMarkdown.png" height = "600" width="800">
+
+https://rmarkdown.rstudio.com
+
+***   
+
+Multiple Formats and Computer Languages
+
+
+R Markdown documents are fully reproducible. Use a [notebook interface](https://bookdown.org/yihui/rmarkdown/notebook.html) to weave together narrative text and code to produce elegantly formatted output using [multiple languages](https://bookdown.org/yihui/rmarkdown/language-engines.html) including R, Python, and SQL.
+
+Shiny
+========================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/shiny.png" height = "600" width="800">
+
+https://shiny.rstudio.com
+
+***   
+Communicate and Collaborate
+
+Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
+
+Some Shiny Examples
+============================================================
+
+- [Global Terrorism](https://www.showmeshiny.com/global-terrorism/)
+
+- [Human Population Predictions](http://dataexplorer.wittgensteincentre.org/wcde-v2/)
+
+- [Value of US Overseas Security Commitments](https://www.rand.org/pubs/tools/TL229/overseas-security-commitments.html)
+
+For many more see:
+- [The Shiny Gallery](https://shiny.rstudio.com/gallery/)
+- [The Shiny User Showcase](https://www.rstudio.com/products/shiny/shiny-user-showcase/)
+- [showmeshiny](https://www.showmeshiny.com/)
+
 
 The R Consortium Enables Industry Participation
 =========================================================
