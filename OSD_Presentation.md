@@ -7,9 +7,12 @@ autosize: true
 RStudio
 ====================================
 Privately held company (Boston)
-- 56 % of resources devoted to building open source and free software for R including:Tidyverse, Shiny and IDE
 
-- Professional products include: RStudio Server Pro, Connect and Package Manager
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RStudio.png" height = "600" width="800">
+
+- 56 % of resources devoted to building open source and free software for R
+
+- Professional products: RStudio Server Pro, Connect and Package Manager
 
 ***
 Mission
@@ -20,17 +23,29 @@ Mission
 
 R Consortium
 ====================================
-Non Profit Memgership Corp
+Non Profit Membership Corp
 - Organized under the Linux Foundation
 - Governed by a Board of Directors
-- Conducts technical work and funds projects through the Infrastructure Steering Committee (ISC)
+- Technical committee (ISC) funds projects and oversees work
+- More that $1M awarded so far
 
-***
+***   
+
 Mission
 
-- To support the R Foundation and organizations developing, maintaining and using R software
-- To identify, develop, implement and fund Infrastructure
-- More that $1M awarded so far.
+- Support the R Foundation and organizations developing and using R
+- Develop and fund Infrastructure
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RC.png" height = "600" width="800">
+
+
+Open Source
+========================================================
+
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/open.png" height = "600" width="800">   
+Photo by [Alex Holyoake](https://unsplash.com/@stairhopper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 
 What is Open Source?
 ========================================================
@@ -52,6 +67,9 @@ Engaging with Open Source
 
 Source: [Linux Foundation Enterprise Open Source: A Practical Introduction](https://www.linuxfoundation.org/open-source-management/2018/08/enterprise-open-source-practical-introduction/)
 
+
+
+
 Open Source
 ========================================================
 Strengths
@@ -60,6 +78,28 @@ Strengths
 ***  
 
 Weaknesses
+
+The R Project
+========================================================
+left: 40%
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/R.png" height = "400" width="600">
+
+- 1976: John Chambers, Bell Labs begin work on S
+- 1993: Gentleman & Ihaka, U of Auckland begin work on R 
+
+***
+Some History
+- 1995: R released as open-source  
+- 1997: R Core Group formed   
+- 1997: CRAN starts with 12 pkgs   
+- 2000: R 1.0.0 released   
+- 2001: Bioconductor Project  
+- 2003: R Foundation formed   
+- 2004: First useR! conf
+- 2009: NY Times article on R   
+- 2015: The R Consortium     
+- 2019: CRAN near 15K pkgs   
 
 
 R is more than a language!
@@ -92,47 +132,83 @@ NOAA-Polar-Ice.nb.html]
 
 The R Ecosystem
 =======================================================
-- The R Language
-- The R Foundation (An Austrian Foundation that manages the R - Language)
-- The R Core Group (20 or so R Foundation members that are - authorized to make commits to R)
-- CRAN: the central repository with more than 14,000 tested packages
-- The R Community
-  * Package contributors and regular users
-  * R-Ladies: a worldwide organization promoting women and diversity
-  * The hundreds of R user groups and regular conferences
-- The R Consortium
+- The [R Language](https://www.r-project.org/)
+- The [R Foundation](https://www.r-project.org/foundation/) (An Austrian Foundation that manages the R - Language)
+- The [R Core Group](https://www.r-project.org/contributors.html) (20 or so R Foundation members that are - authorized to make commits to R)
+- [CRAN](https://cran.r-project.org/mirrors.html): the central repository with more than 14,000 tested packages
+- [Bioconductor](https://www.bioconductor.org/): Project for high-throughput genomic analysis
+- The R Community: Deelopers, users, [RUGS](https://www.meetup.com/pro/r-user-groups), [R-Ladies](https://rladies.org/), conferences etc.
+- The [R Consortium](https://www.r-consortium.org/)
 
 
 
+Open Source Data Science
+====================================================
+left: 50%
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/datascience.png" height = "400" width="600">
 
-
-
-A Brief History of R
-========================================================
-left: 70%
-Key Events:
-<font size = "5">
-- 1976: John Chambers, Bell Labs begin working on S
-- 1993: Gentleman & Ihaka Auckland, NZ   
-- 1995: R released as open-source software   
-- 1997: R Core Group formed   
-- 1997 : April 1, with 12 packages   
-- 2000: R 1.0.0 released   
-- 2001: Bioconductor Project started   
-- 2003: R Foundation formed in Austria   
-- 2004: First international user conference   
-- 2009: New York Times article on R   
-- 2015: The R Consortium Founded     
-- 2019: CRAN approaching 15,000 packages   
+<font size= "4">
+Image by [Jingwen Zheng](https://jingwen-z.github.io/data-viz-with-matplotlib-series9-word-cloud/)
 </font>
 
-***
-<font size = "5">
-Robert Gentleman and Ross Ihaka
-</font>
+***  
 
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/R&R.png" height = "600" width="800">
+- Machine Learning Algorithms
+- Workflows
+- Interoperable Tools
+-  Multiple Data Sources
+- Public Development
+     - Version Control GitHub
+- Collaboration 
+- Reproducibility
+- Validation
+- Production Pipelines
 
+
+
+Data Science Workflow
+================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tidy-wf.png" height = "400" width="600">
+
+TensorFlow
+================================================
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tf.png" height = "600" width="800">
+
+https://www.tensorflow.org
+***  
+
+An open-source library for ML from Google
+- Associated with Deep Learning
+- Is a general purpose library for numerical computation 
+- Implemented as a data flow graphs programming language
+
+Why TensorFlow?
+================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/whyTF.png" height = "600" width="800">
+
+Key TensorFlow Concepts
+==================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/TF_graph.png" height = "600" width="800">
+
+See the Google Brain paper from [ Abadi et al. (2017)](https://dl.acm.org/citation.cfm?doid=3088525.3088527) for the details.
+
+***  
+- Nodes in a `TensorFlow` graph represent mathematical operations
+- Data organized as multidimensional data arrays (tensors) that flow along the edges. 
+- Edges may also indicate control signals that constrain the order of execution.
+
+R Interfaces to TensorFlow
+=======================================================
+left: 60%
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/R-TF.png" height = "600" width="800">
+
+***  
+
+- Keras API: A high-level interface to neural networks
+- Estimators API: A high-level interface to common models including regression and classifiers
+- Core API: A low-level interface that provides full access to the TensorFlow computational Graph
 
 Reproducible Code and Text
 =====================================================
@@ -147,6 +223,7 @@ Multiple Formats and Computer Languages
 
 
 R Markdown documents are fully reproducible. Use a [notebook interface](https://bookdown.org/yihui/rmarkdown/notebook.html) to weave together narrative text and code to produce elegantly formatted output using [multiple languages](https://bookdown.org/yihui/rmarkdown/language-engines.html) including R, Python, and SQL.
+
 
 Shiny
 ========================================================
