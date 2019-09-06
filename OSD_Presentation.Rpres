@@ -23,7 +23,9 @@ Mission
 
 R Consortium
 ====================================
-Non Profit Membership Corp
+left: 45%
+
+Non Profit Membership Corporation
 - Organized under the Linux Foundation
 - Governed by a Board of Directors
 - Technical committee (ISC) funds projects and oversees work
@@ -36,7 +38,7 @@ Mission
 - Support the R Foundation and organizations developing and using R
 - Develop and fund Infrastructure
 
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RC.png" height = "600" width="800">
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RC.png" height = "200" width="400">
 
 
 Open Source
@@ -70,14 +72,22 @@ Source: [Linux Foundation Enterprise Open Source: A Practical Introduction](http
 
 
 
-Open Source
+Open Source Strengths
 ========================================================
-Strengths
+- Open Source has reached "critical mass": there is widespread interoperality amoung conceptually related tools: e.g. you can use [R](https://www.r-project.org) or [Python](https://www.python.org/) (or R **and** Python) to build deep learning [TensorFlow](https://www.tensorflow.org) models, run them on [Apache Spark](https://spark.apache.org/) clusters, and manage them with [Docker](https://www.docker.com/community/open-source)containers and [Kubernetes](https://kubernetes.io/).
+
+- Continuous Validation: The most important and useful open source projects are continuously monitored and tested by thousands of experts worldwide.
 
 
-***  
+Open Source Weaknesses 
+=======================================================
+- Security: by definition everyone has access to the source code
 
-Weaknesses
+- Licenses may impose restrictions
+  - GPL requires software derived from GPL code and released to the public to also be GPL
+  - See [Package licensing and enterprise use](https://www.r-consortium.org/blog/2019/03/25/package-licensing-and-enterprise-use)
+  
+- Version control and package management require constant attention
 
 The R Project
 ========================================================
@@ -101,6 +111,21 @@ Some History
 - 2015: The R Consortium     
 - 2019: CRAN near 15K pkgs   
 
+S was conceived as an interface
+======================================================
+left: 60%
+
+John Chambers’ famous diagram from May 1976 indicates the intention to design a software interface to call an arbitrary Fortran subroutine, ABC, by wrapping it in some simplified calling syntax: XABC( ).
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/S.png" height = "400" width="600">
+
+***  
+
+The main idea was to bring the best computational facilities to the people doing the analysis. As John phrased it: “combine serious computational challenges with convenience”
+
+
+
+
 
 R is more than a language!
 ========================================================
@@ -118,6 +143,7 @@ Some Characteristics of the R Language
 R is an interpreted scripting language 
 - Base R has a relatively small footprint
 - The majority of growth and innovation comes from contriputed packages: libraries of functions.
+- Features such as non-standard evaluation make it a good choice for "Design Specific Languages"
 
 ***  
 
@@ -153,22 +179,58 @@ Image by [Jingwen Zheng](https://jingwen-z.github.io/data-viz-with-matplotlib-se
 
 ***  
 
-- Machine Learning Algorithms
+- ML Algorithms
 - Workflows
 - Interoperable Tools
--  Multiple Data Sources
-- Public Development
-     - Version Control GitHub
-- Collaboration 
-- Reproducibility
+- Multiple Data Sources
 - Validation
 - Production Pipelines
+- Reproducibility
+- Collaboration 
 
+
+Machine Learning Algorithms
+===============================================
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/mltv.png" height = "600" width="800">
+
+https://cran.r-project.org/web/views/MachineLearning.html
 
 
 Data Science Workflow
 ================================================
+
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tidy-wf.png" height = "400" width="600">
+
+***  
+
+- The tidyverse is a DSL for Data Science
+- All packages share an underlying design philosophy, grammar, and data structures. 
+
+
+Enterprise Data Science
+=================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/eWF.png" height = "400" width="600">
+
+*** 
+
+- Aspects of enterprise-wide data science include the integration of data sources, access and security issues, version control and the management of models and other artifacts
+- RSstudio tools address these issues
+
+Model Management Workflow Example
+===============================================
+
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/model_man.png" height = "600" width="800">
+
+https://solutions.rstudio.com/model-management/overview/
+
+Content Deployment
+===============================================
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/content.png" height = "600" width="800">
+
+https://solutions.rstudio.com/deploy/overview/
 
 TensorFlow
 ================================================
@@ -178,10 +240,11 @@ TensorFlow
 https://www.tensorflow.org
 ***  
 
-An open-source library for ML from Google
+An open-source library for ML from Google Brain
 - Associated with Deep Learning
 - Is a general purpose library for numerical computation 
 - Implemented as a data flow graphs programming language
+- Hardware Independent (CPU, GPU, TPU)
 
 Why TensorFlow?
 ================================================
@@ -189,7 +252,7 @@ Why TensorFlow?
 
 Key TensorFlow Concepts
 ==================================================
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/TF_graph.png" height = "600" width="800">
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tfg.png" height = "600" width="800">
 
 See the Google Brain paper from [ Abadi et al. (2017)](https://dl.acm.org/citation.cfm?doid=3088525.3088527) for the details.
 
@@ -209,6 +272,22 @@ left: 60%
 - Keras API: A high-level interface to neural networks
 - Estimators API: A high-level interface to common models including regression and classifiers
 - Core API: A low-level interface that provides full access to the TensorFlow computational Graph
+
+R Interface to Apache Spark: sparlkyr
+========================================
+left: 40%
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/sparklyr.png" height = "400" width="600">
+
+https://spark.rstudio.com
+
+*** 
+
+- Connect to Spark
+- Use as backend to [`dplyr`](https://CRAN.R-project.org/package=dplyr)
+- Filter and aggregate Spark data sets
+- Use Spark's [`MLlib`](http://spark.apache.org/docs/latest/mllib-guide.html)
+
 
 Reproducible Code and Text
 =====================================================
@@ -251,10 +330,7 @@ For many more see:
 - [showmeshiny](https://www.showmeshiny.com/)
 
 
-The R Consortium Enables Industry Participation
-=========================================================
 
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RC.png" height = "600" width="800">
 
 Help
 ========================================================
