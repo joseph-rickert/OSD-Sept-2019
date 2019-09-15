@@ -74,14 +74,17 @@ Source: [Linux Foundation Enterprise Open Source: A Practical Introduction](http
 
 Open Source Strengths
 ========================================================
-- Open Source has reached "critical mass": there is widespread interoperality amoung conceptually related tools: e.g. you can use [R](https://www.r-project.org) or [Python](https://www.python.org/) (or R **and** Python) to build deep learning [TensorFlow](https://www.tensorflow.org) models, run them on [Apache Spark](https://spark.apache.org/) clusters, and manage them with [Docker](https://www.docker.com/community/open-source)containers and [Kubernetes](https://kubernetes.io/).
+- Open Source has reached "critical mass": there is widespread interoperability among conceptually related tools: e.g. you can use [R](https://www.r-project.org) or [Python](https://www.python.org/) (or R **and** Python) to build deep learning [TensorFlow](https://www.tensorflow.org) models, run them on [Apache Spark](https://spark.apache.org/) clusters, and manage them with [Docker](https://www.docker.com/community/open-source)containers and [Kubernetes](https://kubernetes.io/).
 
 - Continuous Validation: The most important and useful open source projects are continuously monitored and tested by thousands of experts worldwide.
 
 
 Open Source Weaknesses 
 =======================================================
-- Security: by definition everyone has access to the source code
+- Security: 
+  - by definition everyone has access to the source code
+  - security is not generally a design requirement
+  
 
 - Licenses may impose restrictions
   - GPL requires software derived from GPL code and released to the public to also be GPL
@@ -115,7 +118,7 @@ S was conceived as an interface
 ======================================================
 left: 60%
 
-John Chambers’ famous diagram from May 1976 indicates the intention to design a software interface to call an arbitrary Fortran subroutine, ABC, by wrapping it in some simplified calling syntax: XABC( ).
+John Chambers’ famous diagram from May 1976 indicates the intention to design a software interface to call an arbitrary FORTRAN subroutine, ABC, by wrapping it in some simplified calling syntax: XABC( ).
 
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/S.png" height = "400" width="600">
 
@@ -142,7 +145,7 @@ Some Characteristics of the R Language
 ========================================================
 R is an interpreted scripting language 
 - Base R has a relatively small footprint
-- The majority of growth and innovation comes from contriputed packages: libraries of functions.
+- The majority of growth and innovation comes from contributed packages: libraries of functions.
 - Features such as non-standard evaluation make it a good choice for "Design Specific Languages"
 
 ***  
@@ -163,7 +166,7 @@ The R Ecosystem
 - The [R Core Group](https://www.r-project.org/contributors.html) (20 or so R Foundation members that are - authorized to make commits to R)
 - [CRAN](https://cran.r-project.org/mirrors.html): the central repository with more than 14,000 tested packages
 - [Bioconductor](https://www.bioconductor.org/): Project for high-throughput genomic analysis
-- The R Community: Deelopers, users, [RUGS](https://www.meetup.com/pro/r-user-groups), [R-Ladies](https://rladies.org/), conferences etc.
+- The R Community: Developers, users, [RUGS](https://www.meetup.com/pro/r-user-groups), [R-Ladies](https://rladies.org/), conferences etc.
 - The [R Consortium](https://www.r-consortium.org/)
 
 
@@ -171,6 +174,7 @@ The R Ecosystem
 Open Source Data Science
 ====================================================
 left: 50%
+
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/datascience.png" height = "400" width="600">
 
 <font size= "4">
@@ -180,12 +184,12 @@ Image by [Jingwen Zheng](https://jingwen-z.github.io/data-viz-with-matplotlib-se
 ***  
 
 - ML Algorithms
-- Workflows
-- Interoperable Tools
-- Multiple Data Sources
 - Validation
-- Production Pipelines
+- Workflows
+- Interoperable Software
 - Reproducibility
+- Multiple Data Sources
+- Production Pipelines
 - Collaboration 
 
 
@@ -195,6 +199,16 @@ Machine Learning Algorithms
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/mltv.png" height = "600" width="800">
 
 https://cran.r-project.org/web/views/MachineLearning.html
+
+Validation
+===============================================
+Package Level
+- Test Programs are available for inspection and use
+- E.g. Almost 10K lines of [test code](https://github.com/therneau/survival/tree/master/tests) for [`survival`](https://cran.r-project.org/package=survival) package
+
+***
+Industry/company Critical Collections
+- E.g. Pharmaceutical Industry [R Validation Hub](https://www.pharmar.org/)
 
 
 Data Science Workflow
@@ -208,31 +222,7 @@ Data Science Workflow
 - All packages share an underlying design philosophy, grammar, and data structures. 
 
 
-Enterprise Data Science
-=================================================
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/eWF.png" height = "400" width="600">
-
-*** 
-
-- Aspects of enterprise-wide data science include the integration of data sources, access and security issues, version control and the management of models and other artifacts
-- RSstudio tools address these issues
-
-Model Management Workflow Example
-===============================================
-
-
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/model_man.png" height = "600" width="800">
-
-https://solutions.rstudio.com/model-management/overview/
-
-Content Deployment
-===============================================
-
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/content.png" height = "600" width="800">
-
-https://solutions.rstudio.com/deploy/overview/
-
-TensorFlow
+Interoperable Software: R / Python / TensorFlow
 ================================================
 
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tf.png" height = "600" width="800">
@@ -240,13 +230,13 @@ TensorFlow
 https://www.tensorflow.org
 ***  
 
-An open-source library for ML from Google Brain
+- An open-source library for ML from Google Brain
 - Associated with Deep Learning
 - Is a general purpose library for numerical computation 
 - Implemented as a data flow graphs programming language
 - Hardware Independent (CPU, GPU, TPU)
 
-Why TensorFlow?
+TensorFlow: Production Grade ML Software
 ================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/whyTF.png" height = "600" width="800">
 
@@ -273,23 +263,8 @@ left: 60%
 - Estimators API: A high-level interface to common models including regression and classifiers
 - Core API: A low-level interface that provides full access to the TensorFlow computational Graph
 
-R Interface to Apache Spark: sparlkyr
-========================================
-left: 40%
 
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/sparklyr.png" height = "400" width="600">
-
-https://spark.rstudio.com
-
-*** 
-
-- Connect to Spark
-- Use as backend to [`dplyr`](https://CRAN.R-project.org/package=dplyr)
-- Filter and aggregate Spark data sets
-- Use Spark's [`MLlib`](http://spark.apache.org/docs/latest/mllib-guide.html)
-
-
-Reproducible Code and Text
+Reproducibility
 =====================================================
 R Markdown
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/RMarkdown.png" height = "600" width="800">
@@ -298,13 +273,69 @@ https://rmarkdown.rstudio.com
 
 ***   
 
-Multiple Formats and Computer Languages
+Reproducibly integrate code and text
 
 
-R Markdown documents are fully reproducible. Use a [notebook interface](https://bookdown.org/yihui/rmarkdown/notebook.html) to weave together narrative text and code to produce elegantly formatted output using [multiple languages](https://bookdown.org/yihui/rmarkdown/language-engines.html) including R, Python, and SQL.
+Use [notebooks ](https://bookdown.org/yihui/rmarkdown/notebook.html) to weave together narrative text and code from several computer languages (including R, Python, and SQL)to produce formatted output for several document types (HTML, pdf, etc) using [multiple languages](https://bookdown.org/yihui/rmarkdown/language-engines.html).
 
 
-Shiny
+
+
+Production Data Sources
+========================================
+left: 40%
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/sparklyr.png" height = "400" width="600">
+
+https://spark.rstudio.com
+
+*** 
+Connect to Spark Clusters
+- Use as backend to [`dplyr`](https://CRAN.R-project.org/package=dplyr)
+- Filter and aggregate Spark data sets
+- Use Spark's [`MLlib`](http://spark.apache.org/docs/latest/mllib-guide.html)
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/cluster.png" height = "400" width="600">
+
+
+Production Workflows / Pipelines
+=================================================
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/eWF.png" height = "400" width="600">
+
+*** 
+
+- Aspects of enterprise-wide data science include the integration of data sources, access and security issues, version control and the management of models and other artifacts
+- RSstudio tools address these issues
+
+
+Model Management Workflow Example
+===============================================
+
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/model_man.png" height = "600" width="800">
+
+https://solutions.rstudio.com/model-management/overview/
+
+Production Deployment with Containers
+==================================================
+Kubernetes and Docker Pipeline
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/launcher.png" height = "400" width="600">
+
+*** 
+Containers:
+- Package up everything needed to run App
+- Reliably deploy Apps on multiple platforms
+- Distribute Apps across clusters
+
+Content Deployment
+===============================================
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/content.png" height = "600" width="800">
+
+https://solutions.rstudio.com/deploy/overview/
+
+
+Collaboration within teams and between departments
 ========================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/shiny.png" height = "600" width="800">
 
@@ -331,11 +362,6 @@ For many more see:
 
 
 
-
-Help
-========================================================
-
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
 
 
 
