@@ -1,8 +1,13 @@
 Open Source Data Science: An R Perspective
 ========================================================
 author: Joseph B. Rickert
-date: September 2019
+date: September 18, 2019
 autosize: true
+
+Center for Strategic and Budgetary Assessments   
+Implications of Data Science as a Resource   
+Workshop 3
+
 
 RStudio
 ====================================
@@ -157,7 +162,9 @@ R is a functional, object based language
 
 A Brief Example
 ======================================================
-NOAA-Polar-Ice.nb.html] 
+NOAA-Polar-Ice.nb.html
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/noaa.png" height = "400" width="600">
 
 The R Ecosystem
 =======================================================
@@ -199,6 +206,21 @@ Machine Learning Algorithms
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/mltv.png" height = "600" width="800">
 
 https://cran.r-project.org/web/views/MachineLearning.html
+
+
+Machine Learning with Caret Package
+===============================================
+The caret package (short for **C**lassification And **RE**gression **T**raining) is a set of functions that attempt to streamline the process for creating predictive models.
+
+<iframe src="http://topepo.github.io/caret/available-models.html" width="1000" height="700"></iframe>
+
+
+tidymodels: a new framework for predictive modeling
+====================================================
+
+<iframe src="https://www.tidyverse.org/articles/2018/08/tidymodels-0-0-1/" width="1000" height="700"></iframe>
+
+
 
 Validation
 ===============================================
@@ -361,8 +383,18 @@ For many more see:
 - [showmeshiny](https://www.showmeshiny.com/)
 
 
+Thank You
+============================================
 
+joseph.rickert@rstudio.com
+@RStudioJoe
 
+This presentation available at:
+https://github.com/joseph-rickert/OSD-Sept-2019
+
+***   
+
+<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/JBR.png" height = "600" width="800">
 
 
 
