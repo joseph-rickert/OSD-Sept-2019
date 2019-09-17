@@ -228,7 +228,6 @@ Package Level
 - Test Programs are available for inspection and use
 - E.g. Almost 10K lines of [test code](https://github.com/therneau/survival/tree/master/tests) for [`survival`](https://cran.r-project.org/package=survival) package
 
-***
 Industry/company Critical Collections
 - E.g. Pharmaceutical Industry [R Validation Hub](https://www.pharmar.org/)
 
@@ -244,7 +243,7 @@ Data Science Workflow
 - All packages share an underlying design philosophy, grammar, and data structures. 
 
 
-Interoperable Software: R / Python / TensorFlow
+Interoperable Software: R / Python / etc.
 ================================================
 
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tf.png" height = "600" width="800">
@@ -258,7 +257,7 @@ https://www.tensorflow.org
 - Implemented as a data flow graphs programming language
 - Hardware Independent (CPU, GPU, TPU)
 
-TensorFlow: Production Grade ML Software
+TensorFlow: Production Grade ML
 ================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/whyTF.png" height = "600" width="800">
 
@@ -357,16 +356,20 @@ Content Deployment
 https://solutions.rstudio.com/deploy/overview/
 
 
-Collaboration within teams and between departments
+Communicate and Collaborate
 ========================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/shiny.png" height = "600" width="800">
 
 https://shiny.rstudio.com
 
 ***   
-Communicate and Collaborate
 
-Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
+- Within teams and between departments
+
+- Shiny makes it easy to build interactive web apps
+  - Host standalone apps on a webpage
+  - Embed apps in R Markdown documents
+  - Build dashboards 
 
 Some Shiny Examples
 ============================================================

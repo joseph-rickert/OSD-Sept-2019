@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.tidyverse.org/articles/2018/08/tidymodels-0-0-1/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="og:image" content="https://www.tidyverse.org/images/tidyverse-default.png">
+<meta name="generator" content="Hugo 0.24.1">
+
+<title>The tidymodels Package - Tidyverse</title>
+<meta property="og:title" content="The tidymodels Package - Tidyverse">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.tidyverse.org/articles/tidymodels-0-0-1-sq.jpg">
+<meta property="description" content="tidymodels 0.0.1 is on CRAN.
+">
+<meta property="og:description" content="tidymodels 0.0.1 is on CRAN.
+">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.tidyverse.org/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.tidyverse.org/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.tidyverse.org/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="https://www.tidyverse.org/images/favicons/site.webmanifest">
+<link rel="mask-icon" href="https://www.tidyverse.org/images/favicons/safari-pinned-tab.svg">
+<link rel="shortcut icon" href="https://www.tidyverse.org/images/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" href="/images/favicons/browserconfig.xml">
+
+
+<script async="" src="./analytics.js"></script><script type="text/javascript" src="./e64da9c199dc3a8cbe1fa62e5341391aaa0f223e.js"></script>
+
+
+
+<link href="./github.min.css" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="./ce033e440c17f1c95f6afd2e820876a6463860fe.css">
+
+<link rel="icon" href="https://www.tidyverse.org/images/favicon.ico">
+<link rel="alternate" type="application/atom+xml" title="Blog" href="https://www.tidyverse.org/articles/index.xml">
+
+  </head>
+  <body>
+    <div id="appTidyverseSite" class="shrinkHeader alwaysShrinkHeader">
+      <div id="main">
+        
+        <div id="rStudioHeader">
+          <div class="band">
+            <div class="innards bandContent">
+              <div>
+                <a class="productName" href="https://www.tidyverse.org/">Tidyverse</a>
+              </div>
+              <div id="menu">
+  <div id="menuToggler"></div>
+  <div id="menuItems" class="">
+    
+    
+    <a class="menuItem " href="https://www.tidyverse.org/packages/">Packages</a>
+    
+    <a class="menuItem current" href="https://www.tidyverse.org/articles/">Articles</a>
+    
+    <a class="menuItem " href="https://www.tidyverse.org/learn/">Learn</a>
+    
+    <a class="menuItem " href="https://www.tidyverse.org/help/">Help</a>
+    
+    <a class="menuItem " href="https://www.tidyverse.org/contribute/">Contribute</a>
+    
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+
+
+<div class="band padForHeader pushFooter">
+  <div class="bandContent">
+    <div class="full splitColumns withMobileMargins">
+      <div class="column75">
+
+      <h1 class="article-title">The tidymodels Package</h1>
+
+      
+      
+
+      
+
+      <div class="article-content">
+      <p>The <code>tidymodels</code> package is now on <a href="http://cran.r-project.org/web/packages/tidymodels">CRAN</a>. Similar to its sister package <code>tidyverse</code>, it can be used to install and load tidyverse packages related to modeling and analysis. Currently, it installs and attaches <a href="https://broom.tidyverse.org/"><code>broom</code></a>, <a href="http://dplyr.tidyverse.org/"><code>dplyr</code></a>, <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>, <a href="http://infer.netlify.com/"><code>infer</code></a>, <a href="https://purrr.tidyverse.org/"><code>purrr</code></a>, <a href="https://tidymodels.github.io/recipes/"><code>recipes</code></a>, <a href="https://tidymodels.github.io/rsample/"><code>rsample</code></a>, <a href="https://tibble.tidyverse.org/"><code>tibble</code></a>, and <a href="https://tidymodels.github.io/yardstick/"><code>yardstick</code></a>.</p>
+
+<pre><code class="language-r hljs"><span class="hljs-keyword">library</span>(tidymodels)
+<span class="hljs-comment">#&gt; ── Attaching packages ───────────────────────────────── tidymodels 0.0.1 ──</span>
+<span class="hljs-comment">#&gt; ✔ ggplot2   3.0.0     ✔ recipes   0.1.3</span>
+<span class="hljs-comment">#&gt; ✔ tibble    1.4.2     ✔ broom     0.5.0</span>
+<span class="hljs-comment">#&gt; ✔ purrr     0.2.5     ✔ yardstick 0.0.1</span>
+<span class="hljs-comment">#&gt; ✔ dplyr     0.7.6     ✔ infer     0.3.0</span>
+<span class="hljs-comment">#&gt; ✔ rsample   0.0.2</span>
+<span class="hljs-comment">#&gt; ── Conflicts ──────────────────────────────────── tidymodels_conflicts() ──</span>
+<span class="hljs-comment">#&gt; ✖ rsample::fill() masks tidyr::fill()</span>
+<span class="hljs-comment">#&gt; ✖ dplyr::filter() masks stats::filter()</span>
+<span class="hljs-comment">#&gt; ✖ dplyr::lag()    masks stats::lag()</span>
+<span class="hljs-comment">#&gt; ✖ recipes::step() masks stats::step()</span>
+</code></pre>
+
+<p><code>tidymodels</code> also contains a burgeoning list of <em>tagged packages</em>. These can be used to install sets of packages for specific purposes. For example, if you are in need of additional tidy tools for analyzing text data:</p>
+
+<pre><code class="language-r hljs">tag_attach(<span class="hljs-string">"text analysis"</span>)
+<span class="hljs-comment">#&gt; ── Attaching packages ───────────────────────────────── tidymodels 0.0.1 ──</span>
+<span class="hljs-comment">#&gt; ✔ tidytext 0.1.9     ✔ keras    2.1.6</span>
+</code></pre>
+
+<p>These tags will be updated with each version of <code>tidymodels</code> as new packages are released.</p>
+
+<p>The number of tidyverse modeling package continues to grow. Some packages on the development horizon include:</p>
+
+<ul>
+<li><p><a href="https://topepo.github.io/parsnip"><code>parsnip</code></a>: a unified interface to models. This should significantly reduce the amount of syntactical minutia that you’ll need to memorize by having one standardized model function across different packages and by harmonizing the parameter names across models.</p></li>
+
+<li><p><a href="https://tidymodels.github.io/dials"><code>dials</code></a>: tools for tuning parameters. <code>dials</code> contains objects and methods for creating and validating tuning parameter values as well as grid search tools. This is designed to work seamlessly with <code>parsnip</code>.</p></li>
+
+<li><p><a href="https://topepo.github.io/embed"><code>embed</code></a>: an add-on package for <code>recipes</code>. This can be used to efficiently encode high-cardinality categorical predictors using supervised methods such as likelihood encodings and entity embeddings.</p></li>
+
+<li><p><a href="https://tidymodels.github.io/modelgenerics"><code>modelgenerics</code></a>: a developer-related tool. This lightweight package can help reduce package dependencies by providing a set of generic methods for classes which are used across packages. For example, if you are creating a new <code>tidy</code> method for your model, this package can be used instead of <code>broom</code> (and its dependencies).</p></li>
+</ul>
+
+<p>Keep an eye on the <a href="https://github.com/tidymodels">tidymodels organization page</a> for up-to-date information.</p>
+
+      </div>
+
+      
+
+
+      </div>
+
+      <div class="column25">
+        <div class="section hideOnMobile">
+          <div class="sectionTitle">Contents</div>
+          
+        </div>
+        <div class="section">
+          <div class="sectionTitle">Upcoming events</div>
+          
+
+
+
+
+<div class="event odd">
+  <div class="eventTitle"><a href="https://web.cvent.com/event/802693c8-c50b-4199-a74a-c1a698ff7c0c/summary">Building Tidy Tools Workshop</a></div>
+  <div class="eventLocation">Atlanta, GA</div>
+  <div class="eventDate">Oct 14-15</div>
+  <div class="eventDetails">You should take this workshop if you have experience programming
+in R and want to learn how to tackle larger scale problems. The
+class is taught by Hadley Wickham, Chief Scientist at RStudio.</div>
+</div>
+
+
+
+
+
+<div class="event even">
+  <div class="eventTitle"><a href="https://www.rstudio.com/conference/">rstudio::conf 2020</a></div>
+  <div class="eventLocation">San Francisco, CA</div>
+  <div class="eventDate">Jan 27-30</div>
+  <div class="eventDetails">rstudio::conf 2020 covers all things RStudio, including workshops to
+teach you the tidyverse, and talks to show you the latest and greatest
+features.</div>
+</div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>  
+</div> 
+
+        <div id="rStudioFooter" class="band">
+          <div class="bandContent">
+            <div id="copyright">
+              The tidyverse is proudly supported by <a class="rstudioLogo" href="https://www.rstudio.com/"></a></div>
+            <div id="logos">
+              <a href="https://github.com/tidyverse" class="footerLogo gitHub"></a>
+              <a href="https://twitter.com/search?q=%23tidyverse" class="footerLogo twitter"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>  
+    </div>  
+
+    
+
+
+
+<script src="./highlight.min.js"></script>
+
+
+
+<script src="./r.min.js"></script>
+<script src="./yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115082821-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  
+
+
+</body></html>
