@@ -1,13 +1,8 @@
 Open Source Data Science: An R Perspective
 ========================================================
 author: Joseph B. Rickert
-date: September 18, 2019
+date: September 2019
 autosize: true
-
-Center for Strategic and Budgetary Assessments   
-Implications of Data Science as a Resource   
-Workshop 3
-
 
 RStudio
 ====================================
@@ -162,9 +157,7 @@ R is a functional, object based language
 
 A Brief Example
 ======================================================
-NOAA-Polar-Ice.nb.html
-
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/noaa.png" height = "400" width="600">
+NOAA-Polar-Ice.nb.html] 
 
 The R Ecosystem
 =======================================================
@@ -207,27 +200,13 @@ Machine Learning Algorithms
 
 https://cran.r-project.org/web/views/MachineLearning.html
 
-
-Machine Learning with Caret Package
-===============================================
-The caret package (short for **C**lassification And **RE**gression **T**raining) is a set of functions that attempt to streamline the process for creating predictive models.
-
-<iframe src="http://topepo.github.io/caret/available-models.html" width="1000" height="700"></iframe>
-
-
-tidymodels: a new framework for predictive modeling
-====================================================
-
-<iframe src="https://www.tidyverse.org/articles/2018/08/tidymodels-0-0-1/" width="1000" height="700"></iframe>
-
-
-
 Validation
 ===============================================
 Package Level
 - Test Programs are available for inspection and use
 - E.g. Almost 10K lines of [test code](https://github.com/therneau/survival/tree/master/tests) for [`survival`](https://cran.r-project.org/package=survival) package
 
+***
 Industry/company Critical Collections
 - E.g. Pharmaceutical Industry [R Validation Hub](https://www.pharmar.org/)
 
@@ -243,7 +222,7 @@ Data Science Workflow
 - All packages share an underlying design philosophy, grammar, and data structures. 
 
 
-Interoperable Software: R / Python / etc.
+Interoperable Software: R / Python / TensorFlow
 ================================================
 
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/tf.png" height = "600" width="800">
@@ -257,7 +236,7 @@ https://www.tensorflow.org
 - Implemented as a data flow graphs programming language
 - Hardware Independent (CPU, GPU, TPU)
 
-TensorFlow: Production Grade ML
+TensorFlow: Production Grade ML Software
 ================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/whyTF.png" height = "600" width="800">
 
@@ -356,20 +335,16 @@ Content Deployment
 https://solutions.rstudio.com/deploy/overview/
 
 
-Communicate and Collaborate
+Collaboration within teams and between departments
 ========================================================
 <img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/shiny.png" height = "600" width="800">
 
 https://shiny.rstudio.com
 
 ***   
+Communicate and Collaborate
 
-- Within teams and between departments
-
-- Shiny makes it easy to build interactive web apps
-  - Host standalone apps on a webpage
-  - Embed apps in R Markdown documents
-  - Build dashboards 
+Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
 
 Some Shiny Examples
 ============================================================
@@ -386,18 +361,8 @@ For many more see:
 - [showmeshiny](https://www.showmeshiny.com/)
 
 
-Thank You
-============================================
 
-joseph.rickert@rstudio.com
-@RStudioJoe
 
-This presentation available at:
-https://github.com/joseph-rickert/OSD-Sept-2019
-
-***   
-
-<img src="/Users/JBRickert/Documents/RStudio_Projects/OSD-Sept-2019/JBR.png" height = "600" width="800">
 
 
 

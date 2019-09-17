@@ -342,9 +342,13 @@ Collaboration within teams and between departments
 https://shiny.rstudio.com
 
 ***   
-Communicate and Collaborate
+Within teams and between departments
 
-Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
+Shiny makes it easy to build interactive web apps
+
+Host standalone apps on a webpage
+Embed apps in R Markdown documents
+Build dashboards
 
 Some Shiny Examples
 ============================================================
